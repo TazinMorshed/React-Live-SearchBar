@@ -1,20 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Ubuntu&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .app {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
   margin: 50px;
 }
 .search {
+  background: transparent;
+  border: none;
   padding: 10px;
-  font-size: 20px;
-}
-
-.list {
-  padding: 0;
-  list-style: none;
+  font-size: 40px;
+  justify-content: center;
   text-align: center;
 }
 
-.listItem {
-  margin-bottom: 20px;
-  font-size: 20px;
-  color: #444;
-  font-weight: 300;
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid #444;
+  font-size: 21px;
+  background-color: rgb(22, 18, 18);
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+td {
+  width: 20%;
+  border-bottom: 1px solid black;
+
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.blob-1 {
+  position: fixed;
+  z-index: -1;
+  width: 440px;
+  height: 440px;
+  border-radius: 15rem;
+  top: 65%;
+  left: 20px;
+  background: radial-gradient(
+      63.62% 69.52% at 100% 0%,
+      rgba(247, 214, 98, 0.8) 0%,
+      rgba(247, 214, 98, 0.168) 52.08%,
+      rgba(247, 214, 98, 0) 100%
+    ),
+    linear-gradient(
+      208.42deg,
+      #f0422a 7.46%,
+      rgba(240, 88, 42, 0.18) 42.58%,
+      rgba(240, 101, 42, 0) 64.13%
+    ),
+    radial-gradient(
+      114.51% 122.83% at 0% -15.36%,
+      #e74f6a 0%,
+      rgba(231, 79, 106, 0.22) 66.72%,
+      rgba(231, 79, 106, 0) 100%
+    ),
+    linear-gradient(
+      333.95deg,
+      rgba(83, 208, 236, 0.85) -7.76%,
+      rgba(83, 208, 236, 0.204) 19.67%,
+      rgba(138, 137, 190, 0) 35.42%
+    ),
+    radial-gradient(
+      109.15% 148.57% at 4.46% 98.44%,
+      #1b3180 0%,
+      rgba(27, 49, 128, 0) 100%
+    ),
+    linear-gradient(141.57deg, #4eadeb 19.08%, rgba(78, 173, 235, 0) 98.72%);
+  background-blend-mode: normal, normal, normal, normal, multiply, normal;
+  filter: blur(100px);
+}
+
+.blob-2 {
+  position: fixed;
+
+  z-index: -1;
+  width: 440px;
+  height: 440px;
+  border-radius: 15rem;
+  top: -10%;
+  left: 85%;
+  background: radial-gradient(
+      63.62% 69.52% at 100% 0%,
+      rgba(247, 214, 98, 0.8) 0%,
+      rgba(247, 214, 98, 0.168) 52.08%,
+      rgba(247, 214, 98, 0) 100%
+    ),
+    linear-gradient(
+      208.42deg,
+      #f0422a 7.46%,
+      rgba(240, 88, 42, 0.18) 42.58%,
+      rgba(240, 101, 42, 0) 64.13%
+    ),
+    radial-gradient(
+      114.51% 122.83% at 0% -15.36%,
+      #e74f6a 0%,
+      rgba(231, 79, 106, 0.22) 66.72%,
+      rgba(231, 79, 106, 0) 100%
+    ),
+    linear-gradient(
+      333.95deg,
+      rgba(83, 208, 236, 0.85) -7.76%,
+      rgba(83, 208, 236, 0.204) 19.67%,
+      rgba(138, 137, 190, 0) 35.42%
+    ),
+    radial-gradient(
+      109.15% 148.57% at 4.46% 98.44%,
+      #1b3180 0%,
+      rgba(27, 49, 128, 0) 100%
+    ),
+    linear-gradient(141.57deg, #4eadeb 19.08%, rgba(78, 173, 235, 0) 98.72%);
+  background-blend-mode: normal, normal, normal, normal, multiply, normal;
+  filter: blur(100px);
+}
+
+.blob-3 {
+  position: fixed;
+
+  z-index: -1;
+  width: 740px;
+  height: 740px;
+  border-radius: 15rem;
+  top: 15%;
+  left: 35%;
+  background: radial-gradient(
+      73.4% 100.98% at 95.54% 95.05%,
+      rgba(255, 156, 65, 0.78) 0%,
+      rgba(255, 168, 88, 0) 100%
+    ),
+    linear-gradient(197.37deg, #fff0a4 -0.38%, rgba(255, 240, 164, 0) 101.89%),
+    radial-gradient(
+      58.85% 73.83% at 9.82% 3.13%,
+      rgba(49, 132, 255, 0.8) 0%,
+      rgba(56, 75, 247, 0.208) 52.16%,
+      rgba(62, 246, 246, 0) 100%
+    ),
+    linear-gradient(
+      117.39deg,
+      #3e9ef6 3.91%,
+      rgba(238, 43, 183, 0.33) 37.48%,
+      rgba(246, 62, 106, 0) 73.98%
+    ),
+    linear-gradient(306.53deg, #ffaadd 19.83%, rgba(255, 170, 221, 0) 97.33%);
+  background-blend-mode: normal, normal, normal, normal, normal, normal;
+  filter: blur(350px);
 }
